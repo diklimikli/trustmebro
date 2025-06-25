@@ -1,8 +1,8 @@
-window.onload = function () {
-  const link = document.createElement("a");
-  link.href = "jegy.pdf";
-  link.download = "jegy.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+window.onload = () => {
+  const a = document.createElement('a');
+  a.href = 'jegy.pdf';
+  a.download = 'jegy.pdf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };
