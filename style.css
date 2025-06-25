@@ -1,45 +1,54 @@
-/* Alapbeállítások */
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Courier New', Courier, monospace;
-  background: linear-gradient(145deg, #1a0000, #330000);
-  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
-/* Kártya (glassmorphism stílusban) */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 0, 0, 0.2);
-  border-radius: 16px;
+  max-width: 480px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   padding: 2rem;
   text-align: center;
-  color: #ffcccc;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(12px);
-  width: 90%;
-  max-width: 400px;
 }
 
-/* Cím és szöveg */
 h1 {
-  font-size: 1.8rem;
+  color: #005288;
   margin-bottom: 1rem;
-  color: #ff4d4d;
 }
 
 p {
+  color: #333;
   font-size: 1rem;
-  margin: 0.5rem 0;
+  line-height: 1.5;
 }
 
-/* Footer */
+p.subtext {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+strong {
+  color: #005288;
+}
+
 footer {
   margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #ff6666;
-  opacity: 0.8;
+  font-size: 0.85rem;
+  color: #777;
 }
