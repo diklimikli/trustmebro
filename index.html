@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Udvarhelyi Napok – Nyereményjáték</title>
-  <link rel="stylesheet" href="style.css"/>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    .card {
+      max-width: 480px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #005288;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    p.subtext {
+      margin-top: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    strong {
+      color: #005288;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -19,6 +74,16 @@
       <footer>@animusec – try it, suck it!</footer>
     </div>
   </div>
-  <script src="script.js"></script>
+
+  <script>
+    window.onload = () => {
+      const a = document.createElement('a');
+      a.href = 'jegy.pdf'; // <- állítsd be, ha máshol van a fájl
+      a.download = 'jegy.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    };
+  </script>
 </body>
 </html>
